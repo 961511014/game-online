@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tetris - 经典街机游戏 | Game Online</title>
+    <meta name="description" content="在 Game Online 免费玩经典街机游戏 tetris。无需下载，直接在浏览器中控制方块组成平整的平面！">
+    <meta name="keywords" content="Tetris, 俄罗斯方块, 经典游戏, 街机游戏, 免费游戏, 在线游戏">
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Pacman",
+        "description": "经典街机游戏 tetris。无需下载，直接在浏览器中控制方块组成平整的平面！",
+        "genre": ["街机游戏", "经典游戏"],
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="img/games/logo.jpg" alt="Game Online Logo">
+                    <span>Game Online</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索游戏...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="../categories.html">游戏分类</a></li>
+                    <li><a href="../new.html">最新游戏</a></li>
+                    <li><a href="../popular.html">热门游戏</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">首页</a> &gt;
+                <a href="../categories/arcade.html">街机游戏</a> &gt;
+                <span>Pacman</span>
+            </div>
+
+            <div class="game-container">
+                <div class="game-iframe-container">
+                    <iframe src="https://tommalbran.github.io/games/tetris/" allowfullscreen></iframe>
+                </div>
+                
+                <div class="game-action-buttons">
+                    <button id="fullscreen-btn" class="action-btn">
+                        <i class="fas fa-expand"></i> 全屏
+                    </button>
+                    <button id="like-btn" class="action-btn">
+                        <i class="far fa-thumbs-up"></i> 点赞 <span>358</span>
+                    </button>
+                    <button id="fav-btn" class="action-btn" onclick="addToFavorites('pacman')">
+                        <i class="far fa-heart"></i> 收藏
+                    </button>
+                    <button class="action-btn" onclick="reportIssue()">
+                        <i class="fas fa-flag"></i> 报告问题
+                    </button>
+                </div>
+                
+                <div class="game-info">
+                    <h1>Tetris</h1>
+                    <div class="game-meta">
+                        <span><i class="fas fa-gamepad"></i> 街机游戏</span>
+                        <span><i class="fas fa-play"></i> 已玩 125,678 次</span>
+                        <span><i class="fas fa-calendar"></i> 添加于 2025-02-15</span>
+                    </div>
+                    
+                    <div class="game-description">
+                        <h2>游戏介绍</h2>
+                        <p>tetris（俄罗斯方块）是一款经典的街机游戏，玩家需要控制下落的方格准确落在和方格形状缺失一致的平面上得到更多的分数。</p>
+                    </div>
+                    
+                    <div class="game-controls">
+                        <h3>游戏控制</h3>
+                        <ul>
+                            <li class="multi-line"><i class="fas fa-arrow-up"></i> 变化下落方格形状</li>
+                            <li><i class="fas fa-arrow-down"></i> 加快向下移动</li>
+                            <li><i class="fas fa-arrow-left"></i> 向左移动</li>
+                            <li><i class="fas fa-arrow-right"></i> 向右移动</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="game-rating">
+                        <h3>为游戏评分</h3>
+                        <div class="rating">
+                            <span class="star" onclick="rateGame(1)"><i class="fas fa-star"></i></span>
+                            <span class="star" onclick="rateGame(2)"><i class="fas fa-star"></i></span>
+                            <span class="star" onclick="rateGame(3)"><i class="fas fa-star"></i></span>
+                            <span class="star" onclick="rateGame(4)"><i class="fas fa-star"></i></span>
+                            <span class="star" onclick="rateGame(5)"><i class="fas fa-star"></i></span>
+                            <span id="rating-value">0</span>/5 (<span>1,250</span> 人评分)
+                        </div>
+                    </div>
+                    
+                    <div class="game-tags">
+                        <h3>标签</h3>
+                        <div class="tags">
+                            <a href="../tags/arcade.html" class="tag">街机</a>
+                            <a href="../tags/classic.html" class="tag">经典</a>
+                            <a href="../tags/maze.html" class="tag">迷宫</a>
+                            <a href="../tags/retro.html" class="tag">复古</a>
+                            <a href="../tags/skill.html" class="tag">技巧</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="related-games">
+                <h2>类似游戏推荐</h2>
+                <div class="game-grid">
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="tetris.html">
+                                <img src="img/games/tetris.png" alt="Tetris 游戏">
+                                <div class="game-name">Tetris</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="snake.html">
+                                <img src="../img/games/snake.png" alt="Snake 游戏">
+                                <div class="game-name">Snake</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="galaga.html">
+                                <img src="../img/games/galaga.png" alt="Galaga 游戏">
+                                <div class="game-name">Galaga</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="frogger.html">
+                                <img src="../img/games/frogger.png" alt="Frogger 游戏">
+                                <div class="game-name">Frogger</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Modal for reporting issues -->
+            <div id="issue-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>报告问题</h2>
+                    <p>请描述您在游戏中遇到的问题，我们会尽快处理。</p>
+                    <textarea id="issue-text" placeholder="描述问题..."></textarea>
+                    <button onclick="submitIssue()">提交</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/games/logo.jpg" alt="Game Online Logo">
+                    <span>Game Online</span>
+                </div>
+                <div class="footer-links">
+                    <h3>链接</h3>
+                    <ul>
+                        <li><a href="../about.html">关于我们</a></li>
+                        <li><a href="../contact.html">联系我们</a></li>
+                        <li><a href="../privacy.html">隐私政策</a></li>
+                        <li><a href="../terms.html">使用条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>订阅新闻</h3>
+                    <p>获取最新游戏和更新信息</p>
+                    <form>
+                        <input type="email" placeholder="输入您的邮箱">
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Game Online. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

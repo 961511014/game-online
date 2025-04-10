@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Online - 免费在线游戏平台</title>
+    <meta name="description" content="Game Online 提供各种有趣的免费在线游戏，包括Pacman、Tetris和更多流行游戏。无需下载，直接在浏览器中玩！">
+    <meta name="keywords" content="在线游戏, 免费游戏, 浏览器游戏, Pacman, Tetris, 休闲游戏">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Game Online",
+        "url": "https://www.gameonline.com/",
+        "description": "免费在线游戏平台，提供各种流行游戏",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.gameonline.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/games/logo.jpg" alt="Game Online Logo">                    <span>Game Online</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索游戏...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="categories.html">游戏分类</a></li>
+                    <li><a href="new.html">最新游戏</a></li>
+                    <li><a href="popular.html">热门游戏</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>欢迎来到 Game Online!</h1>
+                <p>探索数百款精彩在线游戏，无需下载，立即开始游戏冒险！</p>
+            </div>
+        </section>
+
+        <section class="featured-games">
+            <div class="container">
+                <h2>热门游戏</h2>
+                <div class="game-grid">
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="games/pacman.html">
+                                <img src="img/games/pacman.jpg" alt="Pacman 游戏">
+                                <div class="game-name">Pacman</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="games/tetris.html">
+                                <img src="img/games/tetris.jpg" alt="Tetris 游戏">
+                                <div class="game-name">Tetris</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                            <a href="games/snake.html">
+                                <img src="img/games/snake.jpg" alt="Snake 游戏">
+                                <div class="game-name">Snake</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb">
+                          <a href="games/bounce.html">
+                            <img src="img/games/bounce.jpg" alt="bounce 游戏">
+                            <div class="game-name">bounce</div>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-categories">
+            <div class="container">
+                <h2>游戏分类</h2>
+                <div class="category-grid">
+                    <a href="categories/arcade.html" class="category-card">
+                        <i class="fas fa-gamepad"></i>
+                        <span>街机游戏</span>
+                    </a>
+                    <a href="categories/puzzle.html" class="category-card">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>益智游戏</span>
+                    </a>
+                    <a href="categories/action.html" class="category-card">
+                        <i class="fas fa-running"></i>
+                        <span>动作游戏</span>
+                    </a>
+                    <a href="categories/strategy.html" class="category-card">
+                        <i class="fas fa-chess"></i>
+                        <span>策略游戏</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-games">
+            <div class="container">
+                <h2>最新游戏</h2>
+                <div class="game-grid">
+                    <div class="game-card new">
+                        <div class="game-thumb">
+                            <a href="games/flappy-bird.html">
+                                <img src="img/games/flappy-bird.png" alt="Flappy Bird 游戏">
+                                <div class="game-name">Flappy Bird</div>
+                                <div class="badge">新游戏</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="game-card new">
+                        <div class="game-thumb">
+                            <a href="games/doodle-jump.html">
+                                <img src="img/games/doodle-jump.png" alt="Doodle Jump 游戏">
+                                <div class="game-name">Doodle Jump</div>
+                                <div class="badge">新游戏</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/games/logo.jpg" alt="Game Online Logo">
+                    <span>Game Online</span>
+                </div>
+                <div class="footer-links">
+                    <h3>链接</h3>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
+                        <li><a href="terms.html">使用条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>订阅新闻</h3>
+                    <p>获取最新游戏和更新信息</p>
+                    <form>
+                        <input type="email" placeholder="输入您的邮箱">
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Game Online. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
